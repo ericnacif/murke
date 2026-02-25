@@ -50,7 +50,7 @@ export default function Portfolio() {
       className="relative py-36 px-5 md:px-10 bg-preto-fosco overflow-hidden"
     >
       {/* Decorative line */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-40 bg-linear-to-t from-vermelho-escuro/60 to-transparent" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-40 bg-linear-to-t from-vermelho-brilho/60 to-transparent" />
 
       <div className="max-w-350 mx-auto">
         {/* Header */}
