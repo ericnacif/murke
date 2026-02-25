@@ -113,7 +113,7 @@ export default function Hero() {
           }}
           className="text-cinza-claro uppercase text-xs md:text-sm tracking-[8px] md:tracking-[12px] font-semibold text-center"
         >
-          Arte com intenção. Identidade com direção.
+          Arte com intenção - Identidade com direção
         </motion.p>
       </motion.div>
     </section>

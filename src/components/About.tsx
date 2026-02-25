@@ -5,8 +5,8 @@ import { motion, useInView, animate } from "framer-motion";
 import { useRef, useEffect } from "react";
 
 const stats = [
-  { num: 7, suffix: "+", label: "Anos de experiência" },
-  { num: 80, suffix: "+", label: "Projetos entregues" },
+  { num: 3, suffix: "+", label: "Anos de experiência" },
+  { num: 10, suffix: "+", label: "Clientes Atendidos" },
   { num: 100, suffix: "%", label: "Sob medida" },
 ];
 
@@ -108,10 +108,10 @@ export default function About() {
 
           <div className="border-t border-vermelho-brilho/30 pt-8">
             <p className="text-branco font-bold text-lg md:text-2xl border-l-2 border-vermelho-brilho pl-6 leading-snug">
-              Toda identidade é um posicionamento.
+              Toda identidade é um posicionamento
               <br />
               <span className="text-vermelho-brilho">
-                As fortes não pedem espaço — ocupam.
+                As fortes não pedem espaço — ocupam
               </span>
             </p>
           </div>
@@ -205,8 +205,8 @@ export default function About() {
                   projeto com olhar autoral e direcionamento estratégico.
                 </p>
                 <p className="text-branco font-semibold italic border-l-2 border-vermelho-brilho pl-4 text-base md:text-lg leading-snug">
-                  Criar, para ele, não é apenas produzir imagens.
-                  <br />É construir significado.
+                  Criar, para ele, não é apenas produzir imagens,
+                  <br />É construir significado
                 </p>
               </div>
 
