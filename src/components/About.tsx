@@ -1,13 +1,13 @@
 // src/components/About.tsx
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, animate } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const stats = [
-  { value: "7+", label: "Anos de experiência" },
-  { value: "80+", label: "Projetos entregues" },
-  { value: "100%", label: "Sob medida" },
+  { num: 7, suffix: "+", label: "Anos de experiência" },
+  { num: 80, suffix: "+", label: "Projetos entregues" },
+  { num: 100, suffix: "%", label: "Sob medida" },
 ];
 
 const gabrielLinks = [
@@ -18,6 +18,28 @@ const gabrielLinks = [
   { label: "Instagram", href: "https://www.instagram.com/isntgabrielf/" },
   { label: "Behance", href: "https://www.behance.net/gabrielfreitasgf" },
 ];
+
+function AnimatedCounter({ to, suffix }: { to: number; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() => {
+    if (inView && ref.current) {
+      const controls = animate(0, to, {
+        duration: 4,
+        ease: [0.16, 1, 0.3, 1],
+        onUpdate(value) {
+          if (ref.current) {
+            ref.current.textContent = Math.round(value).toString() + suffix;
+          }
+        },
+      });
+      return () => controls.stop();
+    }
+  }, [inView, to, suffix]);
+
+  return <span ref={ref}>0{suffix}</span>;
+}
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,7 +53,6 @@ export default function About() {
       <div className="absolute inset-0 opacity-[0.025] bg-[repeating-linear-gradient(0deg,transparent,transparent_79px,rgba(255,255,255,1)_79px,rgba(255,255,255,1)_80px)] pointer-events-none" />
 
       <div ref={ref} className="max-w-350 mx-auto">
-        {/* Título */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -57,7 +78,6 @@ export default function About() {
           </h2>
         </motion.div>
 
-        {/* Texto Murke — 3 colunas no desktop, 1 no mobile */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -97,7 +117,6 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Stats — faixa full-width */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -113,7 +132,7 @@ export default function About() {
               className="flex flex-col items-center text-center py-10 px-4 border-r border-branco/8 last:border-r-0"
             >
               <span className="font-nove text-4xl md:text-5xl font-bold text-vermelho-brilho mb-2">
-                {stat.value}
+                <AnimatedCounter to={stat.num} suffix={stat.suffix} />
               </span>
               <span className="text-branco/70 text-[10px] uppercase tracking-[4px] font-bold">
                 {stat.label}
@@ -122,7 +141,6 @@ export default function About() {
           ))}
         </motion.div>
 
-        {/* Card Gabriel — full-width, responsivo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -139,7 +157,6 @@ export default function About() {
           <div className="absolute bottom-0 right-0 w-px h-16 bg-vermelho-brilho/40" />
 
           <div className="p-8 md:p-14">
-            {/* Header do card: avatar + nome — sempre em linha */}
             <div className="flex items-center gap-6 mb-8">
               <div className="relative shrink-0">
                 <div className="w-16 h-16 md:w-20 md:h-20 border border-vermelho-escuro bg-preto-secundario flex items-center justify-center">
@@ -161,7 +178,6 @@ export default function About() {
 
             <div className="w-full h-px bg-branco/8 mb-8" />
 
-            {/* Bio + Links: 2 col no desktop, 1 no mobile */}
             <div className="grid grid-cols-1 md:grid-cols-[1fr_160px] gap-8 md:gap-12">
               <div className="space-y-4 text-cinza-claro text-sm md:text-base font-normal leading-relaxed">
                 <p>
@@ -194,7 +210,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Links coluna lateral */}
               <div className="flex md:flex-col flex-wrap gap-4 md:gap-5 pt-1 md:border-l md:border-branco/8 md:pl-8">
                 <span className="text-[9px] uppercase tracking-[4px] text-vermelho-brilho font-bold hidden md:block mb-1">
                   Redes

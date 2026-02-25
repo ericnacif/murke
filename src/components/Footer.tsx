@@ -63,6 +63,8 @@ export default function Footer() {
             </a>
             <a
               href={`mailto:${EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-cinza-claro hover:text-branco text-sm font-medium transition-colors duration-300 flex items-center gap-2 group cursor-pointer"
             >
               <span className="w-1 h-1 rounded-full bg-vermelho-brilho/60 group-hover:bg-vermelho-brilho transition-colors" />
