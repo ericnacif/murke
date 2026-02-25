@@ -87,7 +87,7 @@ export default function Hero() {
             alt="Murke Branding"
             width={680}
             height={280}
-            className="drop-shadow-[0_0_80px_rgba(192,57,43,0.5)] object-contain w-auto h-auto max-w-[85vw] md:max-w-170"
+            className="object-contain w-auto h-auto max-w-[85vw] md:max-w-170"
             priority
           />
         </motion.div>
