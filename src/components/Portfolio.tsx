@@ -72,7 +72,7 @@ export default function Portfolio() {
           </motion.span>
           <h2 className="font-nove text-5xl md:text-7xl text-branco uppercase tracking-tight leading-none">
             Casos de{" "}
-            <span className="text-transparent [-webkit-text-stroke:2px_#4a0000] italic">
+            <span className="text-transparent [-webkit-text-stroke:2px_#c0392b] italic">
               Sucesso
             </span>
           </h2>
