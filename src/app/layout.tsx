@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Barlow } from "next/font/google";
+import { Barlow, Montserrat } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -8,6 +8,12 @@ const barlow = Barlow({
   subsets: ["latin"],
   variable: "--font-barlow",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +47,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/murke-garras.png?v=4" />
       </head>
       <body
-        className={`${barlow.variable} antialiased`}
+        className={`${barlow.variable} ${montserrat.variable} antialiased`}
         style={{
           backgroundColor: "#0a0a0a",
           color: "#f0ece6",

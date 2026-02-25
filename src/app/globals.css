@@ -1,3 +1,4 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
 @theme {
@@ -8,16 +9,8 @@
   --color-vermelho-brilho: #c0392b;
   --color-branco: #f0ece6;
   --color-cinza-claro: #9a9a9a;
-  --font-nove: "Nove", sans-serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
   --font-barlow: var(--font-barlow), sans-serif;
-}
-
-@font-face {
-  font-family: "Nove";
-  src: url("/fonts/nove.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 html,
