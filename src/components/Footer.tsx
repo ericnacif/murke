@@ -21,7 +21,7 @@ const socialLinks = [
 ];
 
 const PHONE_DISPLAY = "(33) 8461-7647";
-const PHONE_LINK = "5533846176477";
+const PHONE_LINK = "553384617647";
 const EMAIL = "murkecompany@gmail.com";
 
 export default function Footer() {

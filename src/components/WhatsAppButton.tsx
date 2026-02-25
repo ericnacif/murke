@@ -4,7 +4,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const PHONE = "5533846176477";
+const PHONE = "553384617647";
 const MESSAGE =
   "Olá! Vim pelo site e gostaria de saber mais sobre os serviços da Murke.";
 
