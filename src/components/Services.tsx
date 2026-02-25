@@ -10,28 +10,28 @@ const servicos = [
     titulo: "Design Gráfico",
     desc: "Peças visuais de alto impacto que comunicam autoridade: logotipos, papelaria corporativa, materiais institucionais e posts que traduzem a essência da sua marca em cada detalhe.",
     keyword: "Visual",
-    acento: "Forma que fala.",
+    acento: "Forma que fala",
   },
   {
     num: "02",
     titulo: "Branding",
     desc: "Construção completa de identidade: sistema visual, brandbook, paleta, tipografia e guidelines. Tudo o que sua marca precisa para existir com consistência em qualquer ponto de contato.",
     keyword: "Identidade",
-    acento: "Marca que permanece.",
+    acento: "Marca que permanece",
   },
   {
     num: "03",
     titulo: "Posicionamento Visual",
     desc: "Estratégia para marcas que precisam ocupar espaço com intenção. Reestruturação visual e conceitual para modernizar, reposicionar e consolidar presença de mercado.",
     keyword: "Estratégia",
-    acento: "Espaço que se conquista.",
+    acento: "Espaço que se conquista",
   },
   {
     num: "04",
     titulo: "Marketing Visual",
     desc: "Criativos para anúncios, thumbnails estratégicas e direção visual para conteúdo. Materiais de campanha que convertem — com identidade e intenção em cada pixel.",
     keyword: "Performance",
-    acento: "Impacto que converte.",
+    acento: "Impacto que converte",
   },
 ];
 
